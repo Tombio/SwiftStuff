@@ -1,9 +1,12 @@
 /*:
 # Value type vs. Reference type
- - struct vs. class
- - Mitä samaa, mitä eroa?
- -- Voivat toteuttaa protokollan
- -- Voivat
+ * struct vs. class
+ * Mitä samaa, mitä eroa?
+    * Voivat toteuttaa protokollan
+    * Voivat sisältää propertyja ja funktiota
+ * Esim. "Natiivi" array on oikeasti struct, joka toteuttaa
+    * CollectionType, MutableCollectionType
+    * Monia extensioneita, jotka laajentavat toiminnallisuutta
  ---
  ### Struct
  - Ei voi periä luokkia
@@ -17,7 +20,6 @@ struct Struct {
 }
 var a = Struct()
 var b = a           // Kopio, ei yhteisiä viittauksia
-
 a.value = 42
 print("\(a.value), \(b.value)")
 

@@ -6,14 +6,15 @@
  
  ### Mikä?
  - Uusi multiparadigma kieli
- - Korvannee tulevaisuudessa Objective-C:n
+ - Korvannee tulevaisuudessa Objective-C:n kokonaan
  - LLVM runtime (Sama kuin Obj-C)
  - ARC - Muistinhallinta
+ - Täysin yhteensopiva Obj-C koodin kanssa Bridging Headerin avulla
  
  ### Miksi?
  - Objective-C:n syntaksi hanurista
- - Halu tulla lähemmäksi devaajia
- - Pelkästään syntaksin ansiosta potentiaalinen käyttäjäkunta moninkertaistuu
+ - Halu tulla lähemmäs devaajia
+ - Pelkästään syntaksin ansiosta potentiaalinen käyttäjäkunta moninkertaistui
  - Yritys tehdä jotain uutta ja kerätä parhaat puolet samaan kieleen
  - Funktionaaliset ominaisuudet
 */
