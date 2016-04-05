@@ -21,5 +21,5 @@ for (index, value) in arr.enumerate() {
 
 protocol proto {}
 struct rakenne: proto {}
-class luokka: rakenne {}
+class luokka {}
 //: [Previous](@previous) | [Next](@next)
