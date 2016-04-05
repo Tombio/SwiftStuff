@@ -19,11 +19,18 @@ enum Numbers: Int {
 print(Numbers.ONE.rawValue)
 print(Numbers.THREE.rawValue)
 
+
 enum Barcode {
     case UPCA(Int, Int, Int, Int)
     case QRCode(String)
 }
 
-let upca = Barcode.UPCA(1, 2, 3, 4)
+let upcaCode = Barcode.UPCA(1, 2, 3, 4)
 
+switch upcaCode {
+    case .UPCA(let eka, let toka, let kolmas, let neljas) :
+        print("\(neljas)")
+    default :
+        print("foobar")
+}
 //:[Previous](@Syntaksi) | [Next](@next)
