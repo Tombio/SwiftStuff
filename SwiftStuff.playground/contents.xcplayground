@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' auto-termination-delay='5' display-mode='rendered'>
+<playground version='6.0' target-platform='ios' auto-termination-delay='5' display-mode='raw'>
     <pages>
         <page name='Swift on Pop'/>
         <page name='Syntaksi'/>
         <page name='Enumeraatio'/>
         <page name='Value ja referenssi tyypit'/>
         <page name='Closure'/>
+        <page name='Optionals'/>
     </pages>
 </playground>

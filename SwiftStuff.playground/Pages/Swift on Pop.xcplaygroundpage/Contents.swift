@@ -5,17 +5,18 @@
  ---
  
  ### Mikä?
- - Uusi multiparadigma kieli
+ - Applen uusi multiparadigma kieli (2014 loppuvuodesta julkaistu)
  - Korvannee tulevaisuudessa Objective-C:n kokonaan
- - LLVM runtime (Sama kuin Obj-C)
- - ARC - Muistinhallinta
- - Täysin yhteensopiva Obj-C koodin kanssa Bridging Headerin avulla
+ - LLVM kääntäjä (Sama kuin Obj-C)
+ - Active Reference Count, ARC - Muistinhallinta (ei hallitse ristiviittauksia)
+ - Yhteensopiva Obj-C koodin kanssa Bridging Headerin avulla
+ - Aluksi Applen omaan ekosysteemin, myöhemmin open sourcettu ja saatavilla GitHubissa
  
  ### Miksi?
- - Objective-C:n syntaksi hanurista
- - Halu tulla lähemmäs devaajia
+ - Objective-C:n syntaksi erikoinen, muutenkin ehkä jo vanhentunut?
+ - Halu kehittää modernimpi, tehokkaampi ja helpommin lähestyttävä kieli
  - Pelkästään syntaksin ansiosta potentiaalinen käyttäjäkunta moninkertaistui
- - Yritys tehdä jotain uutta ja kerätä parhaat puolet samaan kieleen
+ - Yritys tehdä jotain uutta ja kerätä paras tietämys samaan kieleen
  - Funktionaaliset ominaisuudet
 */
 

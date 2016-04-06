@@ -6,7 +6,7 @@
     * Voivat sisältää propertyja ja funktiota
  * Esim. "Natiivi" array on oikeasti struct, joka toteuttaa
     * CollectionType, MutableCollectionType
-    * Monia extensioneita, jotka laajentavat toiminnallisuutta
+    * Standardikirjasto kirjoitettu pitkälti extensioneiden avulla, jotka laajentavat toiminnallisuutta
  ---
  ### Struct
  - Ei voi periä luokkia
@@ -28,7 +28,7 @@ print("\(a.value), \(b.value)")
  - Voi periä muita luokkia
  - Kuljetetaan referenssinä, yhteiset viittaukset
  - Voidaan myös kirjoittaa täysin immutableksi, jolloin käyttätyy structin tavoin
- - Käytetään, jos halutaan mallintaa tilaa
+ - Käytetään, jos halutaan mallintaa tilaa, tai ulkopuolinen tekijä (Say hello to Cocoa API) sitä vaatii
  - Mikäli === operaattorin käyttö tuntuu järkevältä, valitaan class
  */
 
@@ -37,7 +37,7 @@ class Class {
 }
 var x = Class()
 var y = x           // Viittaus samaan arvoon
-x.value = 42        // Muuttaa kummankin olion arvoa
+x.value = 42
 print("\(x.value), \(y.value)")
 
 //: [Previous](@previous) | [Next](@next)

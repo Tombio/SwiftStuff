@@ -1,19 +1,15 @@
-//: # Enumeraatiot
+/*: 
+# Enumeraatiot
+---
+*/
 
 import Foundation
-
-enum Basic {
-    case Foo
-    case Bar
-}
-
-let basic = Basic.Foo
 
 enum Numbers: Int {
     case ZERO = 0
     case ONE  = 1
-    case TWO
-    case THREE
+    case TWO // = 2
+    case THREE // = 3
 }
 
 print(Numbers.ONE.rawValue)
@@ -28,7 +24,7 @@ enum Barcode {
 let upcaCode = Barcode.UPCA(1, 2, 3, 4)
 
 switch upcaCode {
-    case .UPCA(let eka, let toka, let kolmas, let neljas) :
+    case .UPCA(let eka, let toka, let kolmas, let neljas) : // Labeloidaan tuplen indeksit
         print("\(neljas)")
     default :
         print("foobar")
