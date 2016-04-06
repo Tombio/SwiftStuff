@@ -1,6 +1,6 @@
 /*:
  # Protocol Oriented Programming
- - Applen näkemyksen mukaan siistimipi ja järkevämpi tapa kuin OOP
+ - Applen näkemyksen mukaan siistimpi ja järkevämpi tapa kuin OOP
  - Swift on täysin kykenevä kieli myös OOP:n
  - Protokolla kuten interface monessa kielessä, mutta höystettynä laajennusmahdollisuudella
  - Perusrakenteet tulisi "Best practices" mukaan rakentaa pääasiassa Structeja, Protokollia ja Enumeja käyttäen
@@ -11,6 +11,10 @@ import Foundation
 
 /*:
  ### Mikä on protokolla
+ - Kuten interface, määrittää propertyja ja funktioita tiettyä tarkoitusta varten
+ - Laajennusmahdollisuus
+    - Default-toteutus mahdollista
+ 
 */
 
 protocol Bird {
@@ -24,11 +28,11 @@ protocol Flyable {
 }
 
 /*:
- Structit toteuttavat protokollat niiltä osin kuin on relevanttia
+ Structit toteuttavat tarvittavat protokollat
 */
 struct FlappyBird: Bird, Flyable {
     let name: String
-    // let canFly = true // Tämä on public, joten toteuttaa vaatimuksen canFly { get }
+    let canFly = true // Tämä on public, joten toteuttaa vaatimuksen canFly { get }
     
     let flappyAmplitude: Double
     let flappyFrequency: Double
@@ -46,7 +50,7 @@ struct Penguin: Bird {
 struct SwiftBird: Bird, Flyable {
     var name: String { return "Swift \(version)" }
     let version: Double
-    // let canFly = true
+    let canFly = true
     var airspeedVelocity: Double { return 2000.0 }
 }
 /*: 
@@ -57,10 +61,11 @@ struct SwiftBird: Bird, Flyable {
  protokolla laajennos hätiin!
  **/
 
-
+/*
 extension Bird where Self: Flyable {
     var canFly: Bool { return true }
 }
+*/
 
 let birds: [Bird] = [
     FlappyBird(name: "Flappy", flappyAmplitude: 3.14, flappyFrequency: 50),
@@ -75,4 +80,4 @@ for bird in birds {
 
 
 
-//: [Previous](@previous)
+//: [Previous](@previous) | [Next](@next)

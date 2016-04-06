@@ -1,7 +1,7 @@
 /*:
 # Optionals
  - Swiftin tapa välttää null (== nil) ongelmia
- - Pyritään välttämään "pyramid of doom" ja muita yleisiä nulleihin liittyviä ongelmia
+ - Pyritään välttämään yleisiä nulleihin liittyviä ongelmia
  - ? operaattorilla voidaan testata turvallisesti optinalia
  - ! operaattorilla voidaan pakottaa, mutta saatetaan aiheuttaa "null pointer exception"
  - Yleisesti ottaen ! postfix operaattoria tulisi välttää

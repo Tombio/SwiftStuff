@@ -10,7 +10,7 @@
  ---
  ### Struct
  - Ei voi periä luokkia
- - Default- valinta, jos ei tarvita luokkan erityispiirteitä
+ - Default- valinta, jos ei tarvita luokan erityispiirteitä
  - Kuljetetaan aina kopiona, ei ikinä samoja viittauksia muiden instanssien kanssa
  - Turvallinen, ei voida mutatoida "vahingossa" scopen ulkopuolelta
  - Mikäli == operaattorin käyttö tuntuu järkevältä, valitaan struct

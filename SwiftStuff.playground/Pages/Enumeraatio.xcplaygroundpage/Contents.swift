@@ -21,12 +21,12 @@ enum Barcode {
     case QRCode(String)
 }
 
-let upcaCode = Barcode.UPCA(1, 2, 3, 4)
+let barcode = Barcode.UPCA(1, 2, 3, 4)
 
-switch upcaCode {
+switch barcode {
     case .UPCA(let eka, let toka, let kolmas, let neljas) : // Labeloidaan tuplen indeksit
         print("\(neljas)")
     default :
-        print("foobar")
+        print("Foobar")
 }
 //:[Previous](@Syntaksi) | [Next](@next)
