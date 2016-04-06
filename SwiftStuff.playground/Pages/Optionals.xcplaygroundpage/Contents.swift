@@ -4,6 +4,8 @@
  - Pyritään välttämään "pyramid of doom" ja muita yleisiä nulleihin liittyviä ongelmia
  - ? operaattorilla voidaan testata turvallisesti optinalia
  - ! operaattorilla voidaan pakottaa, mutta saatetaan aiheuttaa "null pointer exception"
+ - Yleisesti ottaen ! postfix operaattoria tulisi välttää
+    - Ei tule sekoittaa ! prefix-operaattoriin (negaatio)
 ---
  */
 
@@ -13,16 +15,17 @@ var optionalString: String?
 
 if let isThereAnything = optionalString {
     // isThereAnything ei voi olla nil täällä
+    // Tänne ei edes tulla, mikäli optionalString == nil
 }
 
 optionalString?.capitalizedString // Ei kaadu, koska ?
 // optionalString!.capitalizedString // Kaatuu, koska nil
 
-struct SomeOptionals {
+struct SomeOptional {
     var maybe: String?
 }
 
-var instance: SomeOptionals?
+var instance: SomeOptional?
 
 print(instance?.maybe?.capitalizedString) // Ei kaadu, koska ?
 print(instance?.maybe!.capitalizedString) // Ei kaadu, koska ?
@@ -32,14 +35,21 @@ print(instance?.maybe!.capitalizedString) // Ei kaadu, koska ?
  - Pakottaa hyviin tapoihin
 */
 
-instance = SomeOptionals(maybe: nil)
+instance = SomeOptional(maybe: nil)
 if let instance = instance {
     print(instance.maybe?.capitalizedString)
 }
 
-
-instance = SomeOptionals(maybe: "maybe not")
+instance = SomeOptional(maybe: "maybe not")
 
 print(instance?.maybe?.capitalizedString)
+
+/*:
+ ### Nil Coalescing operaattori
+ */
+
+let anotherInstance = SomeOptional(maybe: nil)
+let neverNil = anotherInstance.maybe ?? "Default to the rescue" // Lyhyempi versio ?: operaattorista
+print(neverNil)
 
 //: [Previous](@previous) | [Next](@next)

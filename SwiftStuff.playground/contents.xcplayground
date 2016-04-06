@@ -7,5 +7,6 @@
         <page name='Value ja referenssi tyypit'/>
         <page name='Closure'/>
         <page name='Optionals'/>
+        <page name='POP'/>
     </pages>
 </playground>
