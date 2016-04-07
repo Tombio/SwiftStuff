@@ -23,8 +23,7 @@
  - Yritys tehdä jotain uutta ja kerätä paras tietämys samaan kieleen
  - Funktionaaliset ominaisuudet, funktiot 1. luokan kansalaisia
 */
-
-import UIKit
+import Foundation
 
 var str = "Hello, playground"
 print(str)

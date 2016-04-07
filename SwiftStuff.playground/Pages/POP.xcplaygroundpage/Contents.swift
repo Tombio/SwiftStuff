@@ -6,6 +6,7 @@
  - Perusrakenteet tulisi "Best practices" mukaan rakentaa pääasiassa Structeja, Protokollia ja Enumeja käyttäen
  - Classeilla tehdään se, mikä on järkevää, ja käytetään siellä missä on pakko
  - Tyypin tai luokan tulee toteuttaa kaikki protokollan vaatimukset (conformance)
+---
  **/
 import Foundation
 

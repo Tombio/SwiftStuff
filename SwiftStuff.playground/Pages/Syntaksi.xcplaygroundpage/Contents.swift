@@ -31,15 +31,15 @@ let explString: [String] = [] // Tyhjä String taulukko
 ### Iteraatiot
 **/
 for var i in 0..<10 {
-    print(i)
+   // print(i)
 }
 
 for  value in arr.enumerate() { // "for-each"
-    print("\(value)")
+   // print("\(value)")
 }
 
 for (index, value) in arr.enumerate() { // "for-each + indeksi"
-    print("\(index) => \(value)")
+   // print("\(index) => \(value)")
 }
 
 /*: 
@@ -63,6 +63,7 @@ postfix func ~~(lhs: Dollar) -> Double {
 
 let dollar = Dollar(amount: 5.0)
 print(dollar~~)
+print(dollar)
 
 
 /*: 

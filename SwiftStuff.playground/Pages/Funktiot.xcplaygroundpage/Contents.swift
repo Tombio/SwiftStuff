@@ -1,6 +1,7 @@
 /*:
  # Funktiot
  - Ensimmäisen luokan kansalaisia
+ ---
  **/
 
 import Foundation
@@ -34,6 +35,7 @@ func functionParameter(another: (Int, String) -> String){
     print(another(1, "String"))
 }
 functionParameter({(i:Int, s: String) in return "\(i) \(s)" })
+functionParameter{"\($0) \($1)"}
 
 
 func returnsFunction() -> () -> Void {
