@@ -1,5 +1,5 @@
-//: # Closure
 /*:
+ # Closure
  - Kuten yleensä, ei mitään ihmeellistä muihin verrattuna
  - Syntaksisokeria tyyppipäättelyn kanssa
  ---

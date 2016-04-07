@@ -15,7 +15,7 @@
 /*:
  ### Primitiivit
  - Swiftin _primitiivit_ ovat nimettyjä tyyppejä, jotka on toteutettu structien avulla
- - esim. Int => public struct Int : SignedIntegerType, Comparable, Equatable
+ - esim. Int => _public struct Int : SignedIntegerType, Comparable, Equatable_
     - Mahdollistaa "primitiivien" toiminnallisuuden laajentamisen
  */
 
@@ -25,7 +25,7 @@ extension Int {
     }
 }
 
-let myInt = 0 // .asString
+let myInt = 0//.asString
 // print(myInt.asString)
 
 /*:
@@ -34,7 +34,7 @@ let myInt = 0 // .asString
  - Default- valinta, jos ei tarvita luokan erityispiirteitä
  - Kuljetetaan aina kopiona, ei ikinä samoja viittauksia muiden instanssien kanssa
  - Turvallinen, ei voida mutatoida "vahingossa" scopen ulkopuolelta
- - Mikäli == operaattorin käyttö tuntuu järkevältä, valitaan struct
+ - Mikäli == (equals) operaattorin käyttö tuntuu järkevältä, valitaan struct
  */
 struct Struct {
     var value: Int = -1
@@ -50,7 +50,7 @@ a.value = 42
  - Kuljetetaan referenssinä, yhteiset viittaukset
  - Voidaan myös kirjoittaa täysin immutableksi, jolloin käyttätyy structin tavoin
  - Käytetään, jos halutaan mallintaa tilaa, tai ulkopuolinen tekijä (Say hello to Cocoa API) sitä vaatii
- - Mikäli === operaattorin käyttö tuntuu järkevältä, valitaan class
+ - Mikäli === (identical) operaattorin käyttö tuntuu järkevältä, valitaan class
  */
 
 class Class {

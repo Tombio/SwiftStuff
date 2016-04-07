@@ -1,5 +1,5 @@
-//: # Syntaksi
 /*:
+ # Syntaksi
  - Lähellä Scalaa
  - Ei pakollisia puolipisteitä
  - Huomattava ero Objective-C:n verrattuna
@@ -12,7 +12,7 @@ let explicitInt: Int = 10 // Pakotettu tyyppi, let == vakio
 let implicitInt = 42 // Inferoitu
 
 var variable = 10 // var == muuttuja
-var optionalVariable: Int? // "Vapaaehtoinen muuttuja", ei pakko alustaa
+var optionalVariable: Int? // "Vapaaehtoinen muuttuja", ei pakko alustaa rakentajassa
 
 var calculated: Int { // Laskettu arvo, tyypitys vapaaehtoista
     return explicitInt + implicitInt
@@ -24,7 +24,7 @@ var calculated: Int { // Laskettu arvo, tyypitys vapaaehtoista
 **/
 let stringArray = ["foo, bar"] // [String]
 let intArray: [Int] = [1,2,3,4]
-let arr: [NSObject] = ["foo", "bar", 1 , 2] // [NSObject]
+let arr = ["foo", "bar", 1 , 2] // [NSObject]
 let explString: [String] = [] // Tyhjä String taulukko
 
 /*:
@@ -87,10 +87,13 @@ class Luokka: Proto {
     }
 }
 
-enum Basic {
+enum Basic: Proto {
     case Foo
     case Bar
+    
+    func myString() -> String {
+        return "Enumeraatio"
+    }
 }
-let basic = Basic.Foo
 
 //: [Previous](@previous) | [Next](@next)

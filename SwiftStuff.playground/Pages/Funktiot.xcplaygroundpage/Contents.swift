@@ -23,6 +23,10 @@ func withMultipleParameters(publicLabel localLabel: String, param2: String) -> S
 }
 withMultipleParameters(publicLabel: "foo", param2: "bar")
 
+func withNParameters(param: String ... ) {
+    // param => [String]
+}
+withNParameters("","","")
 
 
 func omittedParamLabels(firstByDefault: String, _ secondWithUnderScrore: String) -> String {
@@ -34,8 +38,9 @@ omittedParamLabels("No need for ", "parameter labels")
 func functionParameter(another: (Int, String) -> String){
     print(another(1, "String"))
 }
-functionParameter({(i:Int, s: String) in return "\(i) \(s)" })
-functionParameter{"\($0) \($1)"}
+functionParameter({(i:Int, s: String) in return "\(i) \(s)"})
+
+//functionParameter{"\($0) \($1)"}
 
 
 func returnsFunction() -> () -> Void {
