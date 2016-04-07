@@ -1,13 +1,34 @@
 /*:
-# Value type vs. Reference type
+# Primitiivit, arvot ja referenssit
  * struct vs. class
  * Mitä samaa, mitä eroa?
     * Voivat toteuttaa protokollan
     * Voivat sisältää propertyja ja funktiota
+    * Class voi periä toisen luokan, ei moniperiytymistä
+    * Struct kuljetaan kopiona, class viittauksena
  * Esim. "Natiivi" array on oikeasti struct, joka toteuttaa
-    * CollectionType, MutableCollectionType
+    * CollectionType, MutableCollectionType ...
     * Standardikirjasto kirjoitettu pitkälti extensioneiden avulla, jotka laajentavat toiminnallisuutta
  ---
+ **/
+
+/*:
+ ### Primitiivit
+ - Swiftin _primitiivit_ ovat nimettyjä tyyppejä, jotka on toteutettu structien avulla
+ - esim. Int => public struct Int : SignedIntegerType, Comparable, Equatable
+    - Mahdollistaa "primitiivien" toiminnallisuuden laajentamisen
+ */
+
+extension Int {
+    var asString: String {
+        return String(self)
+    }
+}
+
+let myInt = 0 // .asString
+// print(myInt.asString)
+
+/*:
  ### Struct
  - Ei voi periä luokkia
  - Default- valinta, jos ei tarvita luokan erityispiirteitä
@@ -21,7 +42,7 @@ struct Struct {
 var a = Struct()
 var b = a           // Kopio, ei yhteisiä viittauksia
 a.value = 42
-print("\(a.value), \(b.value)")
+// print("\(a.value), \(b.value)")
 
 /*: 
  ### Class
@@ -38,6 +59,6 @@ class Class {
 var x = Class()
 var y = x           // Viittaus samaan arvoon
 x.value = 42
-print("\(x.value), \(y.value)")
+// print("\(x.value), \(y.value)")
 
 //: [Previous](@previous) | [Next](@next)
