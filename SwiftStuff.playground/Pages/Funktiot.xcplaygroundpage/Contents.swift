@@ -30,11 +30,10 @@ func omittedParamLabels(firstByDefault: String, _ secondWithUnderScrore: String)
 omittedParamLabels("No need for ", "parameter labels")
 
 
-
-func functionParameter(another: (Int, String) -> Void){
-    another(1, "String")
+func functionParameter(another: (Int, String) -> String){
+    print(another(1, "String"))
 }
-
+functionParameter({(i:Int, s: String) in return "\(i) \(s)" })
 
 
 func returnsFunction() -> () -> Void {

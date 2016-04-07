@@ -3,7 +3,7 @@
     <pages>
         <page name='Swift on Pop'/>
         <page name='Syntaksi'/>
-        <page name='Untitled Page'/>
+        <page name='Funktiot'/>
         <page name='Enumeraatio'/>
         <page name='Value ja referenssi tyypit'/>
         <page name='Closure'/>

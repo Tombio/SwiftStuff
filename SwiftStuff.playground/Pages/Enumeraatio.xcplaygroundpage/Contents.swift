@@ -1,6 +1,9 @@
 /*: 
 # Enumeraatiot
+ - Hyvin tavanomaisia muihin kieliin verrattuna
+ - Voivat toteuttaa protokollan
 ---
+ 
 */
 
 import Foundation
